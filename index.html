@@ -11,9 +11,9 @@
      <script src="https://kit.fontawesome.com/9e8306aeda.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="sticky top-0 z-20 container mx-auto shadow-lg">
         <!--Navbar start-->
-        <div class="navbar bg-base-100 sticky top-0 z-20 bg-gray-100 container mx-auto shadow-lg">
+        <div class="navbar bg-base-100 sticky top-0 z-20 bg-gray-100">
             <div class="navbar-start flex items-center space-x-4 lg:space-x-6">
                 <img src="resources/food_logo.png" alt="logo" class="w-12 lg:w-14">
                 <span class="text-sm lg:text-2xl font-bold">Old Town Kitchen</span>
@@ -25,18 +25,18 @@
                 </svg>
               </div>
               <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li><button class="m-2 p-3">Potato</button></li>
-                <li><button class="m-2 p-3">Soup</button></li>
-                <li><button class="m-2 p-3">Chicken</button></li>
-                <li><button class="m-2 p-3">Beef</button></li>
+                <li><button id="potato" onclick="loadFood('potato')" class="m-2 p-3">Potato</button></li>
+                <li><button id="soup" onclick="loadFood('soup')" class="m-2 p-3">Soup</button></li>
+                <li><button id="chicken" onclick="loadFood('chicken')" class="m-2 p-3">Chicken</button></li>
+                <li><button id="beef" onclick="loadFood('beef')" class="m-2 p-3">Beef</button></li>
               </ul>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
-                <li><button class="m-2 p-3 w-20">Potato</button></li>
-                <li><button class="m-2 p-3 w-20">Soup</button></li>
-                <li><button class="m-2 p-3 w-20">Chicken</button></li>
-                <li><button class="m-2 p-3 w-20">Beef</button></li>
+                <li><button id="potato" onclick="loadFood('potato')" class="m-2 p-3 w-20">Potato</button></li>
+                <li><button id="soup" onclick="loadFood('soup')" class="m-2 p-3 w-20">Soup</button></li>
+                <li><button id="chicken" onclick="loadFood('chicken')" class="m-2 p-3 w-20">Chicken</button></li>
+                <li><button id="beef" onclick="loadFood('beef')" class="m-2 p-3 w-20">Beef</button></li>
               </ul>
             </div>
             
@@ -46,7 +46,7 @@
 
            <!-- Banner Start-->
     <!-- Banner Start-->
-    <div class="container mx-auto shadow-lg">
+    <!-- <div class="container mx-auto shadow-lg"> -->
     <div class="carousel w-full">
         <!--carousel 1-->
         <div id="slide1" class="carousel-item relative w-full">
@@ -104,7 +104,18 @@
           </div>
         </div>
        </div>
-      </div>
+      <!-- </div> -->
     </header>
+    <main class="container mx-auto mt-8">
+        <section>
+
+            <!--result-->
+            <div id="result-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+            </div>
+        </section>
+    </main>
+    <script src="food.js">
+
+    </script>
 </body>
 </html>
