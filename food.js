@@ -5,9 +5,44 @@ const loadFood=(foodName)=>{
           .then(res=>res.json())
           .then(data=>representMenus(data.meals))
           .catch(error=>console.log(error));
+    handleButtonClick();   
 }
 
-loadFood('potato');
+
+
+
+
+
+function changeButtonColor(buttons, clickedButton) {
+const defaultColor = 'bg-gray-200';  
+const activeColor = 'bg-orange-500'; 
+  
+  buttons.forEach((b) => {
+    b.classList.add(defaultColor);
+    b.classList.remove(activeColor);
+  });
+  clickedButton.classList.remove(defaultColor);
+  clickedButton.classList.add(activeColor);
+}
+
+
+function handleButtonClick() {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      changeButtonColor(buttons, btn);
+    });
+  });
+}
+
+
+
+
+
+const initializeLandiningPage=()=>{
+    loadFood('potato');
+}
+
 const representMenus=(menus)=>{
    let container=document.getElementById("result-container");
    container.innerHTML='';
@@ -26,3 +61,5 @@ const representMenus=(menus)=>{
 container.appendChild(menuCard);
    });
 }
+
+window.onload=initializeLandiningPage;
