@@ -9,21 +9,17 @@ const loadFood=(foodName)=>{
 }
 
 
-
-
-
-
-function changeButtonColor(buttons, clickedButton) {
-const defaultColor = 'bg-gray-200';  
-const activeColor = 'bg-orange-500'; 
-  
-  buttons.forEach((b) => {
-    b.classList.add(defaultColor);
-    b.classList.remove(activeColor);
-  });
-  clickedButton.classList.remove(defaultColor);
-  clickedButton.classList.add(activeColor);
-}
+   function changeButtonColor(buttons, clickedButton) {
+        //const defaultColor = 'bg-gray-200'; 
+        const activeColor = 'bg-orange-500'; 
+          
+          buttons.forEach((b) => {
+          // b.classList.add(defaultColor);
+            b.classList.remove(activeColor);
+          });
+          //clickedButton.classList.remove(defaultColor);
+          clickedButton.classList.add(activeColor);
+        }
 
 
 function handleButtonClick() {
@@ -31,11 +27,15 @@ function handleButtonClick() {
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       changeButtonColor(buttons, btn);
+      
     });
   });
 }
 
 
+
+
+  
 
 
 
