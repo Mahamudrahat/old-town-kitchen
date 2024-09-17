@@ -23,7 +23,7 @@ const loadFood=(foodName)=>{
 
 
 function handleButtonClick() {
-  const buttons = document.querySelectorAll('.btn');
+  const buttons = document.querySelectorAll('.color-btn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       changeButtonColor(buttons, btn);
@@ -39,9 +39,7 @@ function handleButtonClick() {
 
 
 
-const initializeLandiningPage=()=>{
-    loadFood('potato');
-}
+
 
 const representMenus=(menus)=>{
    let container=document.getElementById("result-container");
@@ -62,4 +60,8 @@ container.appendChild(menuCard);
    });
 }
 
-window.onload=initializeLandiningPage;
+ const initializeLandiningPage=()=>{
+     loadFood('potato');
+ }
+
+ window.onload=initializeLandiningPage;
