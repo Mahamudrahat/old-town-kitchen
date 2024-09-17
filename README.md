@@ -1,5 +1,5 @@
 # Project Name: Old Town Kitchen
-# Project Details( Fronent End Technology) :
+# Project Details( Fronent End Technology) : HTML, TailWindCSS, DaisyUI, JavaScript
 ## Main Features
 
 - **Interactive Button Selection**: Users can click on menu buttons to select food items. The button representing the selected food item changes color to indicate the current selection, while previously selected buttons revert to their default color.
